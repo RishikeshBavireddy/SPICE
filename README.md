@@ -126,50 +126,14 @@ Save as `resistor_iv.cir` and run:
 ```bash
 ngspice resistor_iv.cir
 ```
-
-At the ngspice prompt you can also type:
-
-```
-plot v(in) -i(V1)
-```
-
 Note: `i(V1)` reports the current through the voltage source using SPICE's sign convention. In this file the current flowing **out of** the positive terminal appears negative, so `-i(V1)` plots the positive-valued current through the resistor (makes the I–V line slope positive).
-
-### Expected numeric results (Ohm's law)
-
-With $R = 1\text{k}\Omega$:
-
-* For 0 V → 0 mA
-* For 1 V → 1 mA
-* For 5 V → 5 mA
-* For 10 V → 10 mA
-
-### Small sample table (for 0.5 V steps)
-
-| V (V) |    I (A) | I (mA) |
-| ----: | -------: | -----: |
-|   0.0 | 0.000000 |    0.0 |
-|   0.5 | 0.000500 |    0.5 |
-|   1.0 | 0.001000 |    1.0 |
-|   2.0 | 0.002000 |    2.0 |
-|   5.0 | 0.005000 |    5.0 |
-|  10.0 | 0.010000 |   10.0 |
-
-### Exporting data
-
-```spice
-set filetype=ascii
-wrdata resistor_iv_data.txt v(in) i(V1)
-```
-
-If you want positive currents, post-process the file (multiply by -1) or use `-i(V1)` directly in `.print` or `wrdata` if supported.
 
 ---
 
 ## 2. DC Sweep Analysis
 
 A **DC sweep** varies a voltage or current source over a range of values and records how the circuit responds.
-This is often used to generate I–V characteristics of diodes or transistors.
+This is often used to generate I–V characteristics of devices like diodes and transistors.
 
 ### Example: Diode I–V Curve
 
@@ -205,51 +169,20 @@ Run:
 ngspice diode_iv.cir
 ```
 
-At the prompt, you can also type:
 
-```
-plot v(anode) i(V1)
-```
 
-to see the I–V curve of the diode.
 
----
-
-## Applications
-
-* **Operating point analysis**
-
-  * Biasing point of BJTs and MOSFETs in amplifiers.
-  * Verifying DC node voltages in biasing networks.
-  * Establishing initial conditions before AC or transient simulations.
-
-* **DC sweep analysis**
-
-  * Obtaining diode, BJT, and MOSFET I–V characteristics.
-  * Measuring transfer functions (Vout vs Vin).
-  * Exploring the effect of varying supply voltages.
-
----
-
-## Tips & Tricks
+## Some general stuff
 
 * Use `.print` to print specific voltages and currents:
 
   ```spice
   .print dc v(out) i(R1)
   ```
+* Most of the time you will need to plot stuff instead of just looking at the data, there is an inbuilt plot function in ngspice, but I would recommend you to start using gnuplot as it will come handy durig a lot of stuff like comparing experimental and theoretical data in experiments, curve fitting, interpoltion...
+* 
 * Both `.op` and `.dc` can be used in the same file.
-* To save simulation data for plotting in external tools:
 
-  ```spice
-  set filetype=ascii
-  wrdata results.txt v(out) i(V1)
-  ```
-* Ngspice plots can be exported to `.png` files for including screenshots in your documentation:
-
-  ```spice
-  hardcopy plot.png
-  ```
 
 ---
 
