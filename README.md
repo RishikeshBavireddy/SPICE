@@ -1,6 +1,7 @@
-# Ngspice Tutorial: DC Operating Point & DC Sweep Analysis  
+# Ngspice Tutorial
 
 So this repo is where we’re gonna store all the SPICE programs we write and go through in the series of tutorial sessions over the entire course  
+This README file is like your main reference for the concepts and all other codes that we will do for practice will be in this repo
 
 ---
 
