@@ -3,6 +3,12 @@
 So this repo is where we’re gonna store all the SPICE programs that we will cover in the series of tutorial sessions over the entire course  
 This README file is like your main reference for the concepts
 
+
+---
+## Getting started 
+I will be using fedora 42 kde, it is highly adviced that you use a Linux machine for the entire work-flow, if you are on windows(ditch it or maybe use WSL), if you are on Mac(I think you won't face any issue, the flow will be more or less the same)
+
+**Installation Process**
 ---
 
 ## What is SPICE and why learn it?  
@@ -13,11 +19,11 @@ It’s basically a software which can be used to simulate circuits,instead of so
 **Why should you care?**
 - Check if your circuit actually works before building it and analyse it    
 - It’s completely open source and free !  
-- You can verify your practice-set problem solution if you have any doubt(Or you doubt the answer key🙃)  
+- You can verify your practice-set problem solution if you have any doubt(or you doubt the answer key🙃)  
 
 ---
 
-## What we’ll cover here  
+## What we’ll cover today ?   
 
 In this part (considering what seshadri sir covered till now) , we’ll keep it simple and talk about two basic but important things:  
 
