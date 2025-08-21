@@ -9,6 +9,8 @@ This README file is like your main reference for the concepts
 SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
 It’s basically a software which can be used to simulate circuits,instead of solving those big equations from mesh and nodal analysis,you can analyse the circuit on your laptop itself.(Nice, is'nt it ?)  
 
+---
+
 **Why should you care?**
 - Check if your circuit actually works before building it and analyse it    
 - It’s completely open source and free !  
