@@ -4,12 +4,6 @@ So this repo is where we’re gonna store all the SPICE programs that we will co
 This README file is like your main reference for the concepts
 
 
----
-## Getting started 
-I will be using fedora 42 kde, it is highly adviced that you use a Linux machine for the entire work-flow, if you are on windows(ditch it or maybe use WSL), if you are on Mac(I think you won't face any issue, the flow will be more or less the same)
-
----
-
 ## What is SPICE and why learn it?  
 
 SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
@@ -21,7 +15,11 @@ It’s basically a software which can be used to simulate circuits,instead of so
 - You can verify your practice-set problem solution if you have any doubt(or you doubt the answer key🙃)  
 
 ---
+---
+## Getting started 
+I will be using fedora 42 kde, it is highly adviced that you use a Linux machine for the entire work-flow, if you are on windows(ditch it or maybe use WSL), if you are on Mac(I think you won't face any issue, the flow will be more or less the same)
 
+---
 
 **Installation Process**
 Just open your terminal, and run the following command
