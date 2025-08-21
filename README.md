@@ -1,20 +1,19 @@
 # Ngspice Tutorial
 
-So this repo is where we’re gonna store all the SPICE programs we write and go through in the series of tutorial sessions over the entire course  
-This README file is like your main reference for the concepts and all other codes that we will do for practice will be in this repo
+So this repo is where we’re gonna store all the SPICE programs that we will cover in the series of tutorial sessions over the entire course  
+This README file is like your main reference for the concepts
 
 ---
 
 ## What is SPICE and why learn it?  
 
 SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
-It’s basically a circuit simulator, instead of implementing circuits with breadboards, wires, and debugging for long hours 😅,instead of solving those big equations from mesh and nodal analysis,you can analyse the circuit on your laptop itsel.  
+It’s basically a software which can be used to simulate circuits,instead of solving those big equations from mesh and nodal analysis,you can analyse the circuit on your laptop itself.(Nice, is'nt it ?)  
 
 **Why should you care?**
-- Check if your circuit actually works before building it.  
-- Saves time (and components).  
-- It’s free, widely used in both academia and industry.  
-- Once you know it, you can simulate pretty much any electronic circuit.  
+- Check if your circuit actually works before building it and analyse it    
+- It’s completely open source and free !  
+- You can verify your practice-set problem solution if you have any doubt(Or you doubt the answer key🙃)  
 
 ---
 
