@@ -1,11 +1,5 @@
 # Ngspice Tutorial
 
-So this repo is where we’re gonna store all the SPICE programs that we will cover in the series of tutorial sessions over the entire course  
-This README file is like your main reference for the concepts
-
-Note : I will keep updating this README file after each tutorial session
-
-
 ## What is SPICE and why learn it?  
 
 SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
