@@ -42,7 +42,7 @@ In this part (considering what seshadri sir covered till now) , we’ll keep it 
    → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.  
 
 We’ll write `.cir` files, run them in Ngspice, and check the outputs.  
-Follow along and try to copy-paste the code examples first and then try them out yourself.  
+Follow along, try to copy-paste the code examples first and then try them out yourself.  
 
 ---
 
