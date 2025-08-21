@@ -52,7 +52,35 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 7. [Tips & Tricks](#tips--tricks)
 
 ---
+## Structure of an Ngspice File
 
+Before jumping into simulations, let’s first understand how an Ngspice file (commonly written as `.cir`) is structured.  
+At a high level, an Ngspice code has **two main parts**:
+
+1. **Netlist (Circuit Description)**  
+   This is where you describe your circuit using components and their connections.  
+   - Each component has a name (like `R1`, `V1`, `D1`) and a set of nodes it connects to.  
+   - Example:  
+     ```spice
+     V1 in 0 DC 10   ; 10 V source between node 'in' and ground
+     R1 in out 5k    ; 5kΩ resistor between node 'in' and 'out'
+     R2 out 0 10k    ; 10kΩ resistor between 'out' and ground
+     ```
+
+2. **Control Statements (Simulation Commands)**  
+   After the netlist, you tell Ngspice *what to do with your circuit*.  
+   This part contains analysis commands like:  
+   - `.op` → find DC operating point (node voltages and currents)  
+   - `.dc` → sweep a source across a range and record results  
+   - `.ac` → perform small-signal AC analysis  
+   - `.tran` → transient (time-domain) analysis  
+
+   Example:  
+   ```spice
+   .op
+   .dc V1 0 10 1
+   .end
+   
 ## 1. DC Operating Point Analysis
 
 The **DC operating point** (also called the bias point) is the set of node voltages and currents in a circuit when only DC sources are applied.
