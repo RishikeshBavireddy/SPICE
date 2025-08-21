@@ -9,6 +9,12 @@ This README file is like your main reference for the concepts
 I will be using fedora 42 kde, it is highly adviced that you use a Linux machine for the entire work-flow, if you are on windows(ditch it or maybe use WSL), if you are on Mac(I think you won't face any issue, the flow will be more or less the same)
 
 **Installation Process**
+Just open your terminal, and run the following command
+```bash
+sudo dnf install ngspice
+```
+
+
 ---
 
 ## What is SPICE and why learn it?  
