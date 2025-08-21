@@ -1,10 +1,37 @@
-# Ngspice Tutorial: DC Operating Point & DC Sweep Analysis
+# Ngspice Tutorial: DC Operating Point & DC Sweep Analysis  
 
-This guide introduces **DC operating point analysis** and **DC sweep analysis** in [Ngspice](http://ngspice.sourceforge.net/).
-
-It is written for beginners: even if you have never used SPICE before, you can follow along by copying the code examples into text files and running them.
+So this repo is where we’re gonna store all the SPICE programs we write and go through in the series of tutorial sessions over the entire course  
 
 ---
+
+## What is SPICE and why learn it?  
+
+SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
+It’s basically a circuit simulator, instead of implementing circuits with breadboards, wires, and debugging for long hours 😅,instead of solving those big equations from mesh and nodal analysis,you can analyse the circuit on your laptop itsel.  
+
+**Why should you care?**
+- Check if your circuit actually works before building it.  
+- Saves time (and components).  
+- It’s free, widely used in both academia and industry.  
+- Once you know it, you can simulate pretty much any electronic circuit.  
+
+---
+
+## What we’ll cover here  
+
+In this part (considering what seshadri sir covered till now) , we’ll keep it simple and talk about two basic but important things:  
+
+1. **DC Operating Point Analysis**  
+   → Finding the voltages and currents in your circuit at steady state.  
+
+2. **DC Sweep Analysis**  
+   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.  
+
+We’ll write `.cir` files, run them in Ngspice, and check the outputs.  
+Follow along and try to copy-paste the code examples first and then try them out yourself.  
+
+---
+
 
 ## Contents
 
@@ -20,7 +47,7 @@ It is written for beginners: even if you have never used SPICE before, you can f
 
 ## 1. DC Operating Point Analysis
 
-The **DC operating point** (also called the bias point or Q-point) is the set of node voltages and currents in a circuit when only DC sources are applied.
+The **DC operating point** (also called the bias point) is the set of node voltages and currents in a circuit when only DC sources are applied.
 It is used to check biasing conditions in circuits like amplifiers.
 
 ### Example: Voltage Divider
