@@ -157,6 +157,44 @@ Note: `i(V1)` reports the current through the voltage source using SPICE's sign 
 
 ---
 
+## 3. Transient Analysis
+
+Transient analysis shows how voltages/currents change over time
+
+### Example: Diode I–V Curve
+
+Create a file named `diode_iv.cir` with the following content:
+
+```spice
+* Diode IV characteristic using DC sweep
+V1 anode 0 0
+D1 anode cathode Dmodel
+R1 cathode 0 1k
+
+.model Dmodel D
+.dc V1 0 1 0.01
+
+.print dc v(anode) i(V1)
+.end
+```
+
+Explanation:
+
+* `V1 anode 0 0` defines a voltage source to be swept.
+* `D1` is a diode with model `Dmodel`.
+* `R1` is a load resistor.
+* `.model Dmodel D` defines a default diode model.
+* `.dc V1 0 1 0.01` sweeps V1 from 0 V to 1 V in 0.01 V steps.
+* `.print dc v(anode) i(V1)` prints the voltage at node `anode` and the current through `V1`.
+
+### Running the Simulation
+
+Run:
+
+```bash
+ngspice diode_iv.cir
+```
+
 ## 2. DC Sweep Analysis
 
 A **DC sweep** varies a voltage or current source over a range of values and records how the circuit responds.
@@ -195,7 +233,6 @@ Run:
 ```bash
 ngspice diode_iv.cir
 ```
-
 
 
 
