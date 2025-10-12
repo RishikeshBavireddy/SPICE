@@ -15,7 +15,7 @@ It’s basically a software which can be used to simulate circuits,instead of so
 ---
 ---
 ## Getting started 
-I will be using fedora 42 kde, it is highly adviced that you use a Linux machine for the entire work-flow, if you are on windows(ditch it or maybe use WSL), if you are on Mac(I think you won't face any issue, the flow will be more or less the same)
+I will be using Fedora 42 kde, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
 
 ---
 
@@ -33,7 +33,12 @@ In this part (considering what seshadri sir covered till now) , we’ll keep it 
    → Finding the voltages and currents in your circuit at steady state.  
 
 2. **DC Sweep Analysis**  
-   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.  
+   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.
+
+3. **Transient Analysis**  
+   → Analysing the transient response of the circuit.
+
+    
 
 We’ll write `.cir` files, run them in Ngspice, and check the outputs.  
 Follow along, try to copy-paste the code examples first and then try them out yourself.  
