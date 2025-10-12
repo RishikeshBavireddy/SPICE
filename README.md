@@ -8,22 +8,7 @@
 
 ## About this Repo
 
-This repository is the central place where we will keep all the **Ngspice circuit programs and tutorials** used in the course.  
-consider this as your **digital notebook** , you can find ready-to-run SPICE netlists, example waveforms, and short explanations for each concept we cover in lectures and labs.  
-
----
-
-## Folder Structure
-
-Here’s how the repo is organized:
-
-```
-ngspice-circuits/
-│
-├── tutorials/      # Step-by-step Markdown guides for each analysis
-├── examples/       # Ready-to-run .cir files (grouped by topic: diode, bjt, opamp…)
-├── figures/        # Plots and screenshots (to match with tutorials)
-```
+This repository is the place where we will keep all the **Ngspice circuit programs and tutorials** used in the course.  
 ---
 
 ## How to Use
@@ -44,20 +29,9 @@ ngspice-circuits/
 
 ## Why This Repo Exists
 
-- To support the **Circuits and Network Analysis** course with hands-on examples.  
-- To give students a single reference for Ngspice netlists, notes, and outputs.  
+- To support the **Circuits and Network Analysis** course with hands-on examples.   
 - To encourage you to experiment, tweak circuits, and learn by doing.  
 
 ---
-
-## Contributions
-
-Students are welcome to add:  
-- New `.cir` files (in correct folders).  
-- Screenshots of interesting results.  
-- Short notes or clarifications in `tutorials/`.  
-
-We’ll review and merge useful contributions, so this repo becomes a shared learning space.  
-
 ---
 
