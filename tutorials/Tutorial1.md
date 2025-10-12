@@ -157,43 +157,6 @@ Note: `i(V1)` reports the current through the voltage source using SPICE's sign 
 
 ---
 
-## 3. Transient Analysis
-
-Transient analysis shows how voltages/currents change over time
-
-### Example: Diode I–V Curve
-
-Create a file named `diode_iv.cir` with the following content:
-
-```spice
-* Diode IV characteristic using DC sweep
-V1 anode 0 0
-D1 anode cathode Dmodel
-R1 cathode 0 1k
-
-.model Dmodel D
-.dc V1 0 1 0.01
-
-.print dc v(anode) i(V1)
-.end
-```
-
-Explanation:
-
-* `V1 anode 0 0` defines a voltage source to be swept.
-* `D1` is a diode with model `Dmodel`.
-* `R1` is a load resistor.
-* `.model Dmodel D` defines a default diode model.
-* `.dc V1 0 1 0.01` sweeps V1 from 0 V to 1 V in 0.01 V steps.
-* `.print dc v(anode) i(V1)` prints the voltage at node `anode` and the current through `V1`.
-
-### Running the Simulation
-
-Run:
-
-```bash
-ngspice diode_iv.cir
-```
 
 ## 2. DC Sweep Analysis
 
@@ -234,6 +197,41 @@ Run:
 ngspice diode_iv.cir
 ```
 
+## 3. Transient Analysis
+
+Transient analysis shows how voltages/currents change over time
+
+### Example: Charging of a capacitor - RC Circuit
+
+Create a file named `rc_charging.cir` with the following content:
+
+```spice
+* Charging of a capcitor with a series resistance
+V1 in 0 DC 1
+R1 in out 100
+C out 0 1u
+
+.control
+.tran 10u 10m
+wrdata charging.dat v(out)
+.endc
+
+Explanation:
+
+* 
+* 
+* 
+
+
+
+
+### Running the Simulation
+
+Run:
+
+```bash
+ngspice rc_charging.cir
+```
 
 
 ## Some general stuff
@@ -244,8 +242,6 @@ ngspice diode_iv.cir
   .print dc v(out) i(R1)
   ```
 * Most of the time you will need to plot stuff instead of just looking at the data, there is an inbuilt plot function in ngspice, but I would recommend you to start using gnuplot as it will come handy durig a lot of stuff like comparing experimental and theoretical data in experiments, curve fitting, interpoltion...
-* 
-* Both `.op` and `.dc` can be used in the same file.
 
 
 ---
