@@ -8,7 +8,7 @@
 
 ## About this Repo
 
-This repository is the place where we will keep all the **Ngspice circuit programs and tutorials** used in the course.  
+- This repository is the place where we will keep all the **Ngspice circuit programs and tutorials** used in the course.  
 ---
 
 ## How to Use
@@ -17,12 +17,11 @@ This repository is the place where we will keep all the **Ngspice circuit progra
 2. Clone this repo:  
    ```bash
    git clone https://github.com/RishikeshBavireddy/SPICE.git
-   cd ngspice-circuits
    ```
-3. Browse `tutorials/` → read the concept.  
+3. Browse `tutorials/` on this web-page → read the concept.  
 4. Open the corresponding `.cir` file from `examples/` → run it in Ngspice:  
    ```bash
-   ngspice examples/diode/diode_iv_sweep.cir
+   ngspice name_of_the_design.cir
    ```
 
 ---
