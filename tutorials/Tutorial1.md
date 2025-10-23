@@ -1,18 +1,16 @@
-# Ngspice Tutorial
+# TUTORIAL 1
 
 ## What is SPICE and why learn it?  
 
 SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
-It’s basically a software which can be used to simulate circuits,instead of solving those big equations from mesh and nodal analysis,you can analyse the circuit on your laptop itself.(Nice, is'nt it ?)  
+It’s basically a software which can be used to simulate circuits,instead of solving things on paper using KCL and KVL, you can analyse the circuit on your laptop itself. (Nice, is'nt it ?)  
 
 ---
 
 **Why should you care?**
 - Check if your circuit actually works before building it and analyse it    
 - It’s completely open source and free !  
-- You can verify your practice-set problem solution if you have any doubt(or you doubt the answer key🙃)  
 
----
 ---
 ## Getting started 
 I will be using Ubuntu 22.05, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
