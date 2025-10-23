@@ -31,7 +31,7 @@ In this tutorial, we’ll get started with some basic things you covered before 
    → Finding the voltages and currents in your circuit at steady state.  
 
 2. **DC Sweep Analysis**  
-   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.  
+   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage. (reread the statement if you are in doubt, we want to observe variation of output w.r.t input, this is **NOT** transient analysis !) 
 
 We’ll write `.cir` files, run them in Ngspice, and check the outputs.  
 Follow along, try to copy-paste the code examples first and then try them out yourself.  
