@@ -27,18 +27,13 @@ sudo apt install ngspice
 
 ## What we’ll cover today ?   
 
-In this part (considering what seshadri sir covered till now) , we’ll keep it simple and talk about two basic but important things:  
+In this tutorial, we’ll get started with some basic things you covered before the mid-sem break like operating point analysis  
 
 1. **DC Operating Point Analysis**  
    → Finding the voltages and currents in your circuit at steady state.  
 
 2. **DC Sweep Analysis**  
-   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.
-
-3. **Transient Analysis**  
-   → Analysing the transient response of the circuit.
-
-    
+   → Seeing how your circuit behaves when you change (or sweep) an input, like varying a source voltage.  
 
 We’ll write `.cir` files, run them in Ngspice, and check the outputs.  
 Follow along, try to copy-paste the code examples first and then try them out yourself.  
@@ -53,9 +48,6 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 3. [I–V of a Simple Resistor](#iv-of-a-simple-resistor)
 4. [DC Sweep Analysis](#2-dc-sweep-analysis)
 5. [Diode I–V Example](#example-diode-iv-curve)
-6. [Applications](#applications)
-7. [Tips & Tricks](#tips--tricks)
-
 ---
 ## Structure of an Ngspice File
 
@@ -195,42 +187,6 @@ Run:
 
 ```bash
 ngspice diode_iv.cir
-```
-
-## 3. Transient Analysis
-
-Transient analysis shows how voltages/currents change over time
-
-### Example: Charging of a capacitor - RC Circuit
-
-Create a file named `rc_charging.cir` with the following content:
-
-```spice
-* Charging of a capcitor with a series resistance
-V1 in 0 DC 1
-R1 in out 100
-C out 0 1u
-
-.control
-.tran 10u 10m
-wrdata charging.dat v(out)
-.endc
-
-Explanation:
-
-* 
-* 
-* 
-
-
-
-
-### Running the Simulation
-
-Run:
-
-```bash
-ngspice rc_charging.cir
 ```
 
 
