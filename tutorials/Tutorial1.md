@@ -1,6 +1,6 @@
 # TUTORIAL 1
 
-**What is SPICE ? 
+**What is SPICE ?**
 
 SPICE stands for **Simulation Program with Integrated Circuit Emphasis**.  
 It’s basically a software which can be used to simulate circuits,instead of solving things on paper using KCL and KVL, you can analyse the circuit on your laptop itself. (Nice, is'nt it ?)  
