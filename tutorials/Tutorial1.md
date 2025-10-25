@@ -42,10 +42,8 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 ## Contents
 
 1. [DC Operating Point Analysis](#1-dc-operating-point-analysis)
-2. [Voltage Divider Example](#example-voltage-divider)
-3. [I–V of a Simple Resistor](#iv-of-a-simple-resistor)
-4. [DC Sweep Analysis](#2-dc-sweep-analysis)
-5. [Diode I–V Example](#example-diode-iv-curve)
+2. [DC Sweep Analysis](#2-dc-sweep-analysis)
+2. [Using GNU Plot]()
 ---
 ## Structure of an Ngspice File
 
