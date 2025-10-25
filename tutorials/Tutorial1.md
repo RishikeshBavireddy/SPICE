@@ -94,19 +94,19 @@ V1 in 0 DC 10
 R1 in out 5k
 R2 out 0 10k
 
-.op
-
 *control block
 .control
+op
 run
 print v(out) i(V1)
 .endc
+
 .end
 ```
 
 * `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
 * `R1` and `R2` form a simple resistor divider.
-* `.op` tells Ngspice to compute the operating point.
+* `op` tells Ngspice to compute the operating point.
 * `.end` marks the end of the file.
 
 **Running the Simulation**
@@ -134,18 +134,19 @@ V1 in 0 DC 10
 R1 in out 5k
 C1 out 0 10u
 
-.op
-
 *control block
 .control
+op
 run
 print v(out) i(V1)
 .endc
+
+.end
 ```
 
 * `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
 * `R1` and `C1` form a simple RC circuit.
-* `.op` tells Ngspice to compute the operating point.
+* `op` tells Ngspice to compute the operating point.
 * `.end` marks the end of the file.
 * since we are doing operating point analysis current does not flow as the capacitor charge got saturated
 **Running the Simulation**
@@ -182,12 +183,12 @@ V1 x 0 DC 0
 R1 x 0 10k    
 
 *sweep V1 from 0 V to 10 V in 0.5 V steps
-.dc V1 0 10 0.5   
-
 .control
+dc V1 0 10 0.5 
 run
 print -i(V1)
 .endc
+
 .end
 ```
 **How to run**
