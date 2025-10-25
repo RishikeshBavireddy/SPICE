@@ -12,18 +12,6 @@ It’s basically a software which can be used to simulate circuits, instead of s
 - It’s completely open source and free !  
 
 ---
-**Getting started** 
-
-I will be using Ubuntu, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
-
----
-
-**Installation Process**
-
-Just open your terminal, and run the following command
-```bash
-sudo apt install ngspice
-```
 
 **What we’ll cover today ?**  
 
@@ -40,13 +28,27 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 
 ---
 
-
 **Contents**
 
 1. [DC Operating Point Analysis](#1-dc-operating-point-analysis)
 2. [DC Sweep Analysis](#2-dc-sweep-analysis)
-2. [Using GNU Plot](#GNU-PLOT)
+3. [Using GNU Plot](#GNU-PLOT)
 ---
+
+
+**Getting started** 
+
+I will be using Ubuntu, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
+
+---
+
+**Installation Process**
+
+Just open your terminal, and run the following command
+```bash
+sudo apt install ngspice
+```
+
 **Structure of an Ngspice File**
 
 Before jumping into simulations, let’s first understand how an Ngspice file (commonly written as `.cir`) is structured.  
