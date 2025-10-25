@@ -295,11 +295,66 @@ sudo apt install gnuplot
 
 To use **Gnuplot**, you can either run it interactively in the terminal or execute commands from a script file. (for now, we will just run it interactively from the terminal)
 
-**1. Launching Gnuplot**
+## 1. Launching Gnuplot
 ```bash
 gnuplot
-
 ```
+You'll see the gnuplot prompt:
+```
+gnuplot>
+```
+
+## 2. Preparing Your Data File
+
+Create a data file `data.txt` with space or tab-separated values:
+```
+# X    Y
+1      2
+2      4
+3      6
+4      8
+5      10
+```
+
+## 3. Basic Plotting from Data
+
+### Plot Simple Data
+```gnuplot
+plot "data.txt"
+```
+
+### Plot with Lines
+```gnuplot
+plot "data.txt" with lines
+```
+
+### Plot with Points
+```gnuplot
+plot "data.txt" with points
+```
+
+### Plot with Lines and Points
+```gnuplot
+plot "data.txt" with linespoints
+```
+
+## 4. Plotting Specific Columns
+
+For data with multiple columns `multidata.txt`:
+```
+# X    Y1    Y2
+1     2     1
+2     4     3
+3     6     5
+4     8     7
+5     10    9
+```
+
+Plot specific columns:
+```gnuplot
+plot "multidata.txt" using 1:2 with lines
+```
+
 **References**
 
 * [Ngspice User Manual](http://ngspice.sourceforge.net/docs.html)
