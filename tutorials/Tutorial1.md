@@ -79,7 +79,7 @@ At a high level, an Ngspice code has **two main parts**:
 The **DC operating point** (also called the bias point) is the set of node voltages and currents in a circuit when only DC sources are applied.
 It is used to check biasing conditions in circuits like amplifiers.
 
-### Example: Voltage Divider
+**Example: Voltage Divider**
 
 Create a file named `divider.cir` with the following content:
 
@@ -98,7 +98,7 @@ R2 out 0 10k
 * `.op` tells Ngspice to compute the operating point.
 * `.end` marks the end of the file.
 
-### Running the Simulation
+**Running the Simulation**
 
 Save the file and run:
 
@@ -122,12 +122,12 @@ A **DC sweep** varies a voltage or current source over a range of values and rec
 This is often used to generate I–V characteristics of devices like diodes and transistors.
 
 
-### Example: Resistor I–V Curve
+**Example: Resistor I–V Curve**
 
 A simple way to demonstrate DC sweep is to measure the current through a resistor while sweeping a voltage source. This produces a straight line I–V curve that follows Ohm's law:
 $I = \dfrac{V}{R}$
 
-### Circuit file: `resistor_iv.cir`
+**Circuit file: `resistor_iv.cir`**
 
 ```spice
 * Resistor I-V characteristic using DC sweep
@@ -140,8 +140,7 @@ R1 in 0 1k      ; 1 kohm resistor between node 'in' and ground
 .print dc v(in) i(V1)
 .end
 ```
-
-### How to run
+**How to run**
 
 Save as `resistor_iv.cir` and run:
 
@@ -153,7 +152,7 @@ Note: `i(V1)` reports the current through the voltage source using SPICE's sign 
 ---
 
 
-### Example: Diode I–V Curve
+**Example: Diode I–V Curve**
 
 Create a file named `diode_iv.cir` with the following content:
 
@@ -179,7 +178,7 @@ Explanation:
 * `.dc V1 0 1 0.01` sweeps V1 from 0 V to 1 V in 0.01 V steps.
 * `.print dc v(anode) i(V1)` prints the voltage at node `anode` and the current through `V1`.
 
-### Running the Simulation
+**Running the Simulation**
 
 Run:
 
@@ -187,7 +186,7 @@ Run:
 ngspice diode_iv.cir
 ```
 
-### Example: I-V characteristics of a port (Practice Set - 01, Qn1)
+**Example: I-V characteristics of a port (Practice Set - 01, Qn1)**
 ![Diagram](tutorials/assignment1qn1.png)
 
 Create a file named `ps1q1.cir` with the following content:
@@ -214,7 +213,7 @@ Explanation:
 * `.dc V1 0 1 0.01` sweeps V1 from 0 V to 1 V in 0.01 V steps.
 * `.print dc v(anode) i(V1)` prints the voltage at node `anode` and the current through `V1`.
 
-### Running the Simulation
+**Running the Simulation**
 
 Run:
 
@@ -248,7 +247,7 @@ sudo apt install gnuplot
 
 To use **Gnuplot**, you can either run it interactively in the terminal or execute commands from a script file. (for now, we will just run it interactively from the terminal)
 
-### 1. Launching Gnuplot
+**1. Launching Gnuplot**
 ```bash
 gnuplot
 
