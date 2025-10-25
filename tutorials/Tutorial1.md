@@ -339,6 +339,13 @@ wrdata forward.dat -i(V1)
 
 .end
 ```
+
+Now run this in ngspice :
+
+```bash
+ngspice diode_iv.cir
+```
+
 Now, this will create a file called forward.dat in the working directory, we will use gnuplot to plot the contents of the forward.dat file
 
 Run:
