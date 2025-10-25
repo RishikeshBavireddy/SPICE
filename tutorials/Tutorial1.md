@@ -335,7 +335,7 @@ D1 x 0 DI_1N4007
 .include 1N4007.mod
 
 .control
-dc V1 0.1 5 0.2
+dc V1 0.1 10 0.2
 wrdata forward.dat -i(V1) 
 .endc
 
