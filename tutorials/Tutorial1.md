@@ -205,25 +205,27 @@ Create a file named `diode_iv.cir` with the following content:
 
 ```spice
 * Diode IV characteristic using DC sweep
-V1 anode 0 0
-D1 anode cathode Dmodel
-R1 cathode 0 1k
 
-.model Dmodel D
-.dc V1 0 1 0.01
+V1 in 0 DC 1
+R1 in x 100
+D1 x 0 DI_1N4007
+.include 1N4007.mod
 
-.print dc v(anode) i(V1)
+.control
+dc V1 0.1 5 0.2
+print -i(V1) 
+.endc
+
 .end
 ```
 
 Explanation:
 
-* `V1 anode 0 0` defines a voltage source to be swept.
-* `D1` is a diode with model `Dmodel`.
-* `R1` is a load resistor.
-* `.model Dmodel D` defines a default diode model.
-* `.dc V1 0 1 0.01` sweeps V1 from 0 V to 1 V in 0.01 V steps.
-* `.print dc v(anode) i(V1)` prints the voltage at node `anode` and the current through `V1`.
+* `V1 in 0 DC 1` defines a voltage source to be swept.
+* `D1` is a diode with model `DI_1N4007`.
+* `R1` is a current limiting resistor.
+* `dc V1 0.1 5 0.2` sweeps V1 from 0 V to 1 V in 0.01 V steps.
+* `print -i(V1) ` prints the current through the diode.
 
 **Running the Simulation**
 
@@ -321,7 +323,7 @@ Below example illustartes the use of gnuplot in combination with ngspice
 
 **Example: Diode I–V Curve**
 
-Create a file named `diode_iv.cir` with the following content:
+Create a file named `diode_gnu.cir` with the following content:
 
 ```spice
 *forward bias diode i-v characterestics
@@ -343,7 +345,7 @@ wrdata forward.dat -i(V1)
 Now run this in ngspice :
 
 ```bash
-ngspice diode_iv.cir
+ngspice diode_gnu.cir
 ```
 
 Now, this will create a file called forward.dat in the working directory, we will use gnuplot to plot the contents of the forward.dat file
