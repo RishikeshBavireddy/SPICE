@@ -43,7 +43,7 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 
 **Contents**
 
-1. [DC Operating Point Analysis](#1-dc-operating-point-analysis)
+1. [DC Operating Point Analysis](dc-operating-point-analysis)
 2. [DC Sweep Analysis](#2-dc-sweep-analysis)
 2. [Using GNU Plot]()
 ---
