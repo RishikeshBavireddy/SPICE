@@ -45,7 +45,7 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 
 1. [DC Operating Point Analysis](#1-dc-operating-point-analysis)
 2. [DC Sweep Analysis](#2-dc-sweep-analysis)
-2. [Using GNU Plot]()
+2. [Using GNU Plot](#GNU-PLOT)
 ---
 **Structure of an Ngspice File**
 
@@ -159,7 +159,7 @@ Expected result:
 
 ---
 
-**2. DC Sweep Analysis**
+## 2. DC Sweep Analysis
 
 A **DC sweep** varies a voltage or current source over a range of values and records how the circuit responds.
 This is often used to generate I–V characteristics of devices like diodes and transistors.
