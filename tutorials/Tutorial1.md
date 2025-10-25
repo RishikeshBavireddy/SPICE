@@ -350,10 +350,10 @@ ngspice diode_gnu.cir
 
 Now, this will create a file called forward.dat in the working directory, we will use gnuplot to plot the contents of the forward.dat file
 
-Run:
+Open gnuplot in the terminal and then 
 
 ```bash
-gnuplot plot forward.dat using 1:2 with lines
+plot "forward.dat" using 1:2 with lines
 ```
 
 **References**
