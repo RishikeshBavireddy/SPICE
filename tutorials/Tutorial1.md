@@ -239,13 +239,20 @@ You might feel I am good with the plot function of ngspice, why use this gnuplot
 
 ## Getting Started with Gnuplot
 
-To use **Gnuplot**, you can either run it interactively in the terminal or execute commands from a script file.
+
+**Installation Process**
+Just open your terminal, and run the following command
+```bash
+sudo apt install gnuplot
+```
+
+To use **Gnuplot**, you can either run it interactively in the terminal or execute commands from a script file. (for now, we will just run it interactively from the terminal)
 
 ### 1. Launching Gnuplot
 ```bash
 gnuplot
 
-
+```
 ## References
 
 * [Ngspice User Manual](http://ngspice.sourceforge.net/docs.html)
