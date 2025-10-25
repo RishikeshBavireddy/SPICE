@@ -124,7 +124,7 @@ A **DC sweep** varies a voltage or current source over a range of values and rec
 This is often used to generate I–V characteristics of devices like diodes and transistors.
 
 
-## I–V of a Simple Resistor
+### Example: Resistor I–V Curve
 
 A simple way to demonstrate DC sweep is to measure the current through a resistor while sweeping a voltage source. This produces a straight line I–V curve that follows Ohm's law:
 $I = \dfrac{V}{R}$
