@@ -360,22 +360,27 @@ Below example illustartes the use of gnuplot in combination with ngspice
 Create a file named `diode_iv.cir` with the following content:
 
 ```spice
-WRITE THE SPICE CODE
+*forward bias diode i-v characterestics
 
+V1 in 0 DC 1
+R1 in x 100
+D1 x 0 DI_1N4007
+.include 1N4007.mod
 
-**Running the Simulation**
+.control
+dc V1 0.1 5 0.2
+set wr_singlescale
+wrdata forward.dat -i(V1) 
+.endc
 
-Run:
-
-```bash
-ngspice diode_iv.cir
+.end
 ```
-Now, this will create a file called diode_iv.dat in the working directory, we will use gnuplot to plot the contents of the diode_iv.dat file
+Now, this will create a file called forward.dat in the working directory, we will use gnuplot to plot the contents of the forward.dat file
 
 Run:
 
 ```bash
-gnuplot plot diode_iv.dat using 1:2 with lines
+gnuplot plot forward.dat using 1:2 with lines
 ```
 
 **References**
