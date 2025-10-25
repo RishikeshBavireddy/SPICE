@@ -119,7 +119,7 @@ ngspice divider.cir
 Expected result:
 
 * `V(out)` ≈ 6.66 V
-* `i(V1)` ≈ 0.66 mA
+* `i(V1)` ≈ -0.66 mA
 
 ---
 
