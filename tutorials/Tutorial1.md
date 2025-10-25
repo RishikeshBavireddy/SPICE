@@ -19,6 +19,7 @@ I will be using Ubuntu, it is highly adviced that you use a Linux machine. If yo
 ---
 
 **Installation Process**
+
 Just open your terminal, and run the following command
 ```bash
 sudo apt install ngspice
