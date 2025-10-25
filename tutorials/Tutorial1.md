@@ -188,7 +188,7 @@ ngspice diode_iv.cir
 ```
 
 ### Example: I-V characteristics of a port (Practice Set - 01, Qn1)
-![Diagram](images/diagram.png)
+![Diagram](tutorials/assignment1qn1.png)
 
 Create a file named `ps1q1.cir` with the following content:
 
