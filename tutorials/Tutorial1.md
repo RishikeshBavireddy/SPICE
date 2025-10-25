@@ -76,7 +76,7 @@ At a high level, an Ngspice code has **two main parts**:
    .dc V1 0 10 1
    .end
    
-**1. DC Operating Point Analysis**
+## 1. DC Operating Point Analysis
 
 The **DC operating point** (also called the bias point) is the set of node voltages and currents in a circuit when only DC sources are applied.
 It is used to check biasing conditions in circuits like amplifiers.
