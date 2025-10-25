@@ -315,22 +315,22 @@ Create a data file `data.txt` with space or tab-separated values:
 **3. Basic Plotting from Data**
 
 **Plot Simple Data**
-```gnuplot
+```bash
 plot "data.txt"
 ```
 
 **Plot with Lines**
-```gnuplot
+```bash
 plot "data.txt" with lines
 ```
 
 **Plot with Points**
-```gnuplot
+```bash
 plot "data.txt" with points
 ```
 
 **Plot with Lines and Points**
-```gnuplot
+```bash
 plot "data.txt" with linespoints
 ```
 
@@ -347,7 +347,7 @@ For data with multiple columns `multidata.txt`:
 ```
 
 Plot specific columns:
-```gnuplot
+```bash
 plot "multidata.txt" using 1:2 with lines
 ```
 
