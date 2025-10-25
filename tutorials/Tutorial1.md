@@ -167,8 +167,7 @@ This is often used to generate I–V characteristics of devices like diodes and 
 
 **Example: Resistor I–V Curve**
 
-A simple way to demonstrate DC sweep is to measure the current through a resistor while sweeping a voltage source. This produces a straight line I–V curve that follows Ohm's law:
-$I = \dfrac{V}{R}$
+A simple way to demonstrate DC sweep is to measure the current through a resistor while sweeping a voltage source. This produces a straight line I–V curve that follows Ohm's law
 
 **Circuit file: `resistor_iv.cir`**
 
