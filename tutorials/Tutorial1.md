@@ -235,7 +235,15 @@ Till now, we have seen the use of inbuilt print and plot functions of ngspice. N
 You might feel I am good with the plot function of ngspice, why use this gnuplot ?
 
 - **quality output**: Better customization, multiple export formats (PNG, PDF, SVG), and professional formatting for reports
-- **Flexible workflow**: Easy post-processing of saved data without re-running simulations, and can combine multiple simulation runs. 
+- **Flexible workflow**: Easy post-processing of saved data without re-running simulations, and can combine multiple simulation runs.
+
+## Getting Started with Gnuplot
+
+To use **Gnuplot**, you can either run it interactively in the terminal or execute commands from a script file.
+
+### 1. Launching Gnuplot
+```bash
+gnuplot
 
 
 ## References
