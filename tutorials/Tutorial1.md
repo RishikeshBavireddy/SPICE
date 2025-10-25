@@ -336,7 +336,6 @@ D1 x 0 DI_1N4007
 
 .control
 dc V1 0.1 5 0.2
-set wr_singlescale
 wrdata forward.dat -i(V1) 
 .endc
 
