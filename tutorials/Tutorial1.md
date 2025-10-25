@@ -255,3 +255,4 @@ gnuplot
 **References**
 
 * [Ngspice User Manual](http://ngspice.sourceforge.net/docs.html)
+* [gnuplot](http://www.gnuplot.info/)
