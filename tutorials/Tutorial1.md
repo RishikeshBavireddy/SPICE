@@ -176,11 +176,15 @@ $I = \dfrac{V}{R}$
 * Resistor I-V characteristic using DC sweep
 * Sweep a source from 0 to 10 V and measure current through the source
 
-V1 in 0 0       ; voltage source to be swept (node 'in' to ground)
-R1 in 0 1k      ; 1 kohm resistor between node 'in' and ground
+V1 x 0 DC 0    *voltage source to be swept (node 'in' to ground)
+R1 x 0 10k     *10k ohm resistor between node 'in' and ground
 
-.dc V1 0 10 0.5 ; sweep V1 from 0 V to 10 V in 0.5 V steps
-.print dc v(in) i(V1)
+.dc V1 0 10 0.5   *sweep V1 from 0 V to 10 V in 0.5 V steps
+
+.control
+run
+print -i(V1)
+.endc
 .end
 ```
 **How to run**
