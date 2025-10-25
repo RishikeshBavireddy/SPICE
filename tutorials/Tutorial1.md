@@ -12,7 +12,7 @@ It’s basically a software which can be used to simulate circuits, instead of s
 - It’s completely open source and free !  
 
 ---
-## Getting started 
+**Getting started** 
 I will be using Ubuntu 22.05, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
 
 ---
@@ -23,7 +23,7 @@ Just open your terminal, and run the following command
 sudo apt install ngspice
 ```
 
-## What we’ll cover today ?   
+**What we’ll cover today ?**  
 
 In this tutorial, we’ll get started with some basic things you covered before the mid-sem break like operating point analysis  
 
@@ -39,13 +39,13 @@ Follow along, try to copy-paste the code examples first and then try them out yo
 ---
 
 
-## Contents
+**Contents**
 
 1. [DC Operating Point Analysis](#1-dc-operating-point-analysis)
 2. [DC Sweep Analysis](#2-dc-sweep-analysis)
 2. [Using GNU Plot]()
 ---
-## Structure of an Ngspice File
+**Structure of an Ngspice File**
 
 Before jumping into simulations, let’s first understand how an Ngspice file (commonly written as `.cir`) is structured.  
 At a high level, an Ngspice code has **two main parts**:
@@ -74,7 +74,7 @@ At a high level, an Ngspice code has **two main parts**:
    .dc V1 0 10 1
    .end
    
-## 1. DC Operating Point Analysis
+**1. DC Operating Point Analysis**
 
 The **DC operating point** (also called the bias point) is the set of node voltages and currents in a circuit when only DC sources are applied.
 It is used to check biasing conditions in circuits like amplifiers.
@@ -116,7 +116,7 @@ Expected result:
 ---
 
 
-## 2. DC Sweep Analysis
+**2. DC Sweep Analysis**
 
 A **DC sweep** varies a voltage or current source over a range of values and records how the circuit responds.
 This is often used to generate I–V characteristics of devices like diodes and transistors.
@@ -222,7 +222,7 @@ Run:
 ngspice ps1q1.cir
 ```
 
-## Note :
+**Note :**
 
 * Most of the time you will need to plot stuff instead of just looking at the data, there is an inbuilt plot function in ngspice, but I would recommend you to start using gnuplot as it will come handy durig a lot of stuff like comparing experimental and theoretical data in experiments, curve fitting, interpoltion...
 
@@ -237,7 +237,7 @@ You might feel I am good with the plot function of ngspice, why use this gnuplot
 - **quality output**: Better customization, multiple export formats (PNG, PDF, SVG), and professional formatting for reports
 - **Flexible workflow**: Easy post-processing of saved data without re-running simulations, and can combine multiple simulation runs.
 
-## Getting Started with Gnuplot
+**Getting Started with gnuplot**
 
 
 **Installation Process**
@@ -253,6 +253,6 @@ To use **Gnuplot**, you can either run it interactively in the terminal or execu
 gnuplot
 
 ```
-## References
+**References**
 
 * [Ngspice User Manual](http://ngspice.sourceforge.net/docs.html)
