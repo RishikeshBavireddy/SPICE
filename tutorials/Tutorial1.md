@@ -299,10 +299,6 @@ To use **Gnuplot**, you can either run it interactively in the terminal or execu
 ```bash
 gnuplot
 ```
-You'll see the gnuplot prompt:
-```
-gnuplot>
-```
 
 ## 2. Preparing Your Data File
 
@@ -353,6 +349,33 @@ For data with multiple columns `multidata.txt`:
 Plot specific columns:
 ```gnuplot
 plot "multidata.txt" using 1:2 with lines
+```
+
+We are digressing a bit at this point, so now let us get back to the original topic -- **using gnuplot to visualise ngspice output**
+So, how do we change our ngspice code to use this. The change is simple, we have to modify the control block to write the data using wrdata function
+Below example illustartes the use of gnuplot in combination with ngspice
+
+**Example: Diode I–V Curve**
+
+Create a file named `diode_iv.cir` with the following content:
+
+```spice
+WRITE THE SPICE CODE
+
+
+**Running the Simulation**
+
+Run:
+
+```bash
+ngspice diode_iv.cir
+```
+Now, this will create a file called diode_iv.dat in the working directory, we will use gnuplot to plot the contents of the diode_iv.dat file
+
+Run:
+
+```bash
+gnuplot plot diode_iv.dat using 1:2 with lines
 ```
 
 **References**
