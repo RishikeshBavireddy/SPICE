@@ -86,13 +86,19 @@ It is used to check biasing conditions in circuits like amplifiers.
 Create a file named `divider.cir` with the following content:
 
 ```spice
-* Voltage Divider Circuit
+*Voltage Divider circuit
+
 V1 in 0 DC 10
 R1 in out 5k
 R2 out 0 10k
 
 .op
-.end
+
+*control block
+.control
+run
+print v(out) i(V1)
+.endc
 ```
 
 * `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
@@ -107,16 +113,51 @@ Save the file and run:
 ```bash
 ngspice divider.cir
 ```
-
-If `.op` is present, Ngspice automatically prints the node voltages and branch currents.
-
 Expected result:
 
-* `V(out)` ≈ 3.33 V
-* `I(R1)` = `I(R2)` ≈ 0.33 mA
+* `V(out)` ≈ 6.66 V
+* `i(V1)` ≈ 0.66 mA
 
 ---
 
+**Example: RC Circuit**
+
+Create a file named `rc_ckt.cir` with the following content:
+
+```spice
+*RC circuit op analysis
+
+V1 in 0 DC 10
+R1 in out 5k
+C1 out 0 10u
+
+.op
+
+*control block
+.control
+run
+print v(out) i(V1)
+.endc
+```
+
+* `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
+* `R1` and `C1` form a simple RC circuit.
+* `.op` tells Ngspice to compute the operating point.
+* `.end` marks the end of the file.
+* since we are doing operating point analysis current does not flow as the capacitor charge got saturated
+**Running the Simulation**
+
+Save the file and run:
+
+```bash
+ngspice rc_ckt.cir
+```
+Expected result:
+
+* `V(out)` ≈ 10 V
+* `i(V1)` ≈ 0 A
+
+---
 
 **2. DC Sweep Analysis**
 
