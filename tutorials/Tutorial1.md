@@ -13,7 +13,7 @@ It’s basically a software which can be used to simulate circuits, instead of s
 
 ---
 **Getting started** 
-I will be using Ubuntu 22.05, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
+I will be using Ubuntu, it is highly adviced that you use a Linux machine. If you are on windows try WSL, if you are on Mac I think you won't face any issue, the flow will be more or less the same
 
 ---
 
