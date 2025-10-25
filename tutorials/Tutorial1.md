@@ -117,6 +117,13 @@ Expected result:
 
 ---
 
+
+## 2. DC Sweep Analysis
+
+A **DC sweep** varies a voltage or current source over a range of values and records how the circuit responds.
+This is often used to generate I–V characteristics of devices like diodes and transistors.
+
+
 ## I–V of a Simple Resistor
 
 A simple way to demonstrate DC sweep is to measure the current through a resistor while sweeping a voltage source. This produces a straight line I–V curve that follows Ohm's law:
@@ -147,11 +154,6 @@ Note: `i(V1)` reports the current through the voltage source using SPICE's sign 
 
 ---
 
-
-## 2. DC Sweep Analysis
-
-A **DC sweep** varies a voltage or current source over a range of values and records how the circuit responds.
-This is often used to generate I–V characteristics of devices like diodes and transistors.
 
 ### Example: Diode I–V Curve
 
@@ -188,13 +190,8 @@ ngspice diode_iv.cir
 ```
 
 
-## Some general stuff
+## Note :
 
-* Use `.print` to print specific voltages and currents:
-
-  ```spice
-  .print dc v(out) i(R1)
-  ```
 * Most of the time you will need to plot stuff instead of just looking at the data, there is an inbuilt plot function in ngspice, but I would recommend you to start using gnuplot as it will come handy durig a lot of stuff like comparing experimental and theoretical data in experiments, curve fitting, interpoltion...
 
 
@@ -203,4 +200,3 @@ ngspice diode_iv.cir
 ## References
 
 * [Ngspice User Manual](http://ngspice.sourceforge.net/docs.html)
-* [Spice Syntax Guide](https://www.seas.upenn.edu/~jan/spice/spice.overview.html)
