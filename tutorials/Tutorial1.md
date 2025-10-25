@@ -336,7 +336,7 @@ D1 x 0 DI_1N4007
 
 .control
 dc V1 0.1 10 0.2
-wrdata forward.dat -i(V1) 
+wrdata forward.dat v(x) -i(V1) 
 .endc
 
 .end
