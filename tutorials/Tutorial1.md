@@ -97,7 +97,6 @@ R2 out 0 10k
 *control block
 .control
 op
-run
 print v(out) i(V1)
 .endc
 
@@ -137,7 +136,6 @@ C1 out 0 10u
 *control block
 .control
 op
-run
 print v(out) i(V1)
 .endc
 
@@ -185,7 +183,6 @@ R1 x 0 10k
 *sweep V1 from 0 V to 10 V in 0.5 V steps
 .control
 dc V1 0 10 0.5 
-run
 print -i(V1)
 .endc
 
