@@ -229,6 +229,15 @@ ngspice ps1q1.cir
 
 ---
 
+## GNU Plot
+
+Till now, we have seen the use of inbuilt print and plot functions of ngspice. Now, we will explore an other open-source tool called Gnuplot for plotting output stuff.
+You might feel I am good with the plot function of ngspice, why use this gnuplot ?
+
+- **quality output**: Better customization, multiple export formats (PNG, PDF, SVG), and professional formatting for reports
+- **Flexible workflow**: Easy post-processing of saved data without re-running simulations, and can combine multiple simulation runs. 
+
+
 ## References
 
 * [Ngspice User Manual](http://ngspice.sourceforge.net/docs.html)
