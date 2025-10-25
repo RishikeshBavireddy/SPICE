@@ -101,6 +101,7 @@ R2 out 0 10k
 run
 print v(out) i(V1)
 .endc
+.end
 ```
 
 * `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
