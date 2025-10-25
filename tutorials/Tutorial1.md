@@ -234,41 +234,6 @@ Run:
 ngspice diode_iv.cir
 ```
 
-**Example: I-V characteristics of a port (Practice Set - 01, Qn1)**
-![Diagram](tutorials/assignment1qn1.png)
-
-Create a file named `ps1q1.cir` with the following content:
-
-```spice
-* Port IV characteristic using DC sweep
-V1 anode 0 0
-D1 anode cathode Dmodel
-R1 cathode 0 1k
-
-.model Dmodel D
-.dc V1 0 1 0.01
-
-.print dc v(anode) i(V1)
-.end
-```
-
-Explanation:
-
-* `V1 anode 0 0` defines a voltage source to be swept.
-* `D1` is a diode with model `Dmodel`.
-* `R1` is a load resistor.
-* `.model Dmodel D` defines a default diode model.
-* `.dc V1 0 1 0.01` sweeps V1 from 0 V to 1 V in 0.01 V steps.
-* `.print dc v(anode) i(V1)` prints the voltage at node `anode` and the current through `V1`.
-
-**Running the Simulation**
-
-Run:
-
-```bash
-ngspice ps1q1.cir
-```
-
 **Note :**
 
 * Most of the time you will need to plot stuff instead of just looking at the data, there is an inbuilt plot function in ngspice, but I would recommend you to start using gnuplot as it will come handy durig a lot of stuff like comparing experimental and theoretical data in experiments, curve fitting, interpoltion...
