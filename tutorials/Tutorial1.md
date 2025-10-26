@@ -330,16 +330,18 @@ Create a file named `diode_gnu.cir` with the following content:
 *forward bias diode i-v characterestics
 
 V1 in 0 DC 1
-R1 in x 100
-D1 x 0 DI_1N4007
+R1 in p 100
+D1 p 0 DI_1N4007
 .include 1N4007.mod
 
 .control
 dc V1 0.1 10 0.2
-wrdata forward.dat v(x) -i(V1) 
+set wr_singlescale
+wrdata forward.dat v(p) (v(in)-v(p))*0.01
 .endc
 
 .end
+
 ```
 
 Now run this in ngspice :
@@ -353,7 +355,7 @@ Now, this will create a file called forward.dat in the working directory, we wil
 Open gnuplot in the terminal and then 
 
 ```bash
-plot "forward.dat" using 1:2 with lines
+plot "forward.dat" using 2:3 with lines
 ```
 
 **References**
