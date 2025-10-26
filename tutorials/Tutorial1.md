@@ -336,7 +336,6 @@ D1 p 0 DI_1N4007
 
 .control
 dc V1 0.1 10 0.2
-set wr_singlescale
 wrdata forward.dat v(p) (v(in)-v(p))*0.01
 .endc
 
