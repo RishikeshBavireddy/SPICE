@@ -153,12 +153,12 @@ Rc VCC C 500
 Q1 C B 0 bc547
 
 .include bc547.mod
-.tran 0.1u 10u
 
 .control
-run
+tran 0.1u 10u
 plot v(IN) v(C)
 .endc
+
 .end
 
 ```
