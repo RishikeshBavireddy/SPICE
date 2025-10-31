@@ -5,11 +5,11 @@
 In this tutorial, we’ll have a quick review of last tutorial and then continue with the following topics  
 
 1. **Transient Analysis**  
-   → Analysing the circuit response over time  
+   → Analysing the time-domain response of the circuit   
 
 2. **AC Analysis**  
    → Analysing the variation of the circuit response with the frequency of the AC signal
-   
+
 ---
 
 **Contents**
