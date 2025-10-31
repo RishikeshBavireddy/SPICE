@@ -21,7 +21,7 @@ In this tutorial, we’ll have a quick review of last tutorial and then continue
 
 ## 1. Review
 What did we do in the previous session ?
-![Recap](tutorials/recap.png)
+![Recap](./recap.png)
 
 
 ## 2. Transient Analysis
