@@ -32,6 +32,7 @@ In simple words it is the time-domain response of the circuit
 Create a file named `rc_charge.cir` with the following content:
 
 <img src="./rc_charge.png" alt="Recap" width="60%"/>
+
 ```spice
 *RC circuit charging time response
 
