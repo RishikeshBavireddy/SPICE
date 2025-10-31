@@ -69,7 +69,7 @@ ngspice rc_charge.cir
 Create a file named `rc_discharge.cir` with the following content:
 
 
-<img src="./rc_discharge.png" alt="Recap" width="60%"/>
+<img src="./rc_discharge.png" alt="Recap" width="20%"/>
 
 ```spice
 * RC Discharge with Initial Condition
@@ -106,7 +106,7 @@ ngspice halfwave_rectifier.cir
 
 Create a file named `halfwave_rectifier.cir` with the following content:
 
-<img src="./diode.png" alt="Recap" width="60%"/>
+<img src="./diode.png" alt="Recap" width="20%"/>
 
 ```spice
 *Half Wave Rectifier Simulation with sinusoid input
@@ -194,7 +194,7 @@ It determines how **amplitude** and **phase** of the output voltage or current v
 
 Create a file named `lowpass_filters.cir` with the following content:
 
-<img src="./low_pass.png" alt="Recap" width="60%"/>
+<img src="./low_pass.png" alt="Recap" width="20%"/>
 
 ```spice
 * RC Low-Pass Filter
@@ -227,7 +227,7 @@ ngspice lowpass_filter.cir
 
 Create a file named `highpass_filters.cir` with the following content:
 
-<img src="./high_pass.png" alt="Recap" width="60%"/>
+<img src="./high_pass.png" alt="Recap" width="20%"/>
 
 ```spice
 * RC High-Pass Filter
