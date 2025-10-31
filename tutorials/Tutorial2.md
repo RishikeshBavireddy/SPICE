@@ -68,17 +68,17 @@ Create a file named `rc_discharge.cir` with the following content:
 
 
 ```spice
-*RC circuit transient analysis
+* RC Discharge with Initial Condition
 
-V1 in 0 DC 10
-R1 in out 5k
-C1 out 0 10u
+R1 out 0 10k
+C1 out 0 100u IC=5
 
-.tran 1ms 100ms
-.print tran v(out)
-.plot tran v(out)
+.control
+tran 0.1ms 5s uic
+plot v(out)
+.endc
+
 .end
-
 ```
 
 
