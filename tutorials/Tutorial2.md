@@ -211,9 +211,8 @@ C1 out 0 0.1uF
 .end
 ```
 
-
 * `Vin in 0 AC 1 SIN(0 1 1k)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `1 units` Amplitude and Frequency as `1kHz`.
-* `ac dec 100 10 1Meg` tells Ngspice to run AC analysis with 
+* `ac dec 100 10 1Meg` tells Ngspice to run AC analysis with 100 points per decade, sweeping the frequency logarithmically from 10 Hz to 1 MHz.
 * `plot 'V(out)` tells ngspice to plots voltage of node named `out`.
 * `.end` marks the end of the file.
 
@@ -246,7 +245,7 @@ C1 in out 0.1uF
 
 
 * `Vin in 0 AC 1 SIN(0 1 1k)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `1 units` Amplitude and Frequency as `1kHz`.
-* `ac dec 100 10 1Meg` tells Ngspice to run AC analysis with 
+* `ac dec 100 10 1Meg` tells Ngspice to run AC analysis with 100 points per decade, sweeping the frequency logarithmically from 10 Hz to 1 MHz.
 * `plot 'V(out)` tells ngspice to plots voltage of node named `out`.
 * `.end` marks the end of the file.
 
@@ -255,7 +254,7 @@ C1 in out 0.1uF
 Save the file and run:
 
 ```bash
-ngspice lowpass_filter.cir
+ngspice highpass_filter.cir
 ```
 
 
