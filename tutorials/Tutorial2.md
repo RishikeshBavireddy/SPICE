@@ -21,7 +21,7 @@ In this tutorial, we’ll have a quick review of last tutorial and then continue
 
 ## 1. Review
 <h3>What did we do in the previous session?</h3>
-<img src="./recap.png" alt="Recap" width="40%"/>
+<img src="./recap.png" alt="Recap" width="60%"/>
 
 
 ## 2. Transient Analysis
@@ -31,7 +31,7 @@ In simple words it is the time-domain response of the circuit
 
 Create a file named `rc_charge.cir` with the following content:
 
-<img src="./rc_charge.png" alt="Recap" width="60%"/>
+<img src="./rc_charge.png" alt="Recap" width="40%"/>
 
 ```spice
 *RC circuit charging time response
