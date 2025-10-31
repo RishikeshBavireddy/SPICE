@@ -96,7 +96,7 @@ C1 out 0 10u
 Save the file and run:
 
 ```bash
-ngspice rc_ckt.cir
+ngspice halfwave_rectifier.cir
 ```
 Expected result:
 
@@ -111,21 +111,21 @@ Create a file named `halfwave_rectifier.cir` with the following content:
 
 
 ```spice
-* Inverter Simulation using BC547
+*Full Wave Bridge Rectifier Simulation with sinusoid input
 
-Vcc VCC 0 5V
-Vin IN 0 PULSE(0 5 0 1n 1n 1u 2u)
-Rb IN B 1k
-Rc VCC C 500 
-Q1 C B 0 bc547
+V1 in 0 SIN(0 5 1) ; SIN(offset Amplitude Frequency)
 
-.include bc547.mod
-.tran 0.1u 10u
+D1 in out DI_1N4007
+R1 out 0 5k
 
+.include 1N4007.mod
+
+.tran 0.001s 5s
 .control
 run
-plot v(IN) v(C)
+plot v(out)
 .endc
+
 .end
 
 
@@ -188,7 +188,7 @@ plot v(IN) v(C)
 Save the file and run:
 
 ```bash
-ngspice rc_ckt.cir
+ngspice inverter.cir
 ```
 Expected result:
 
