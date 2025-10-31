@@ -197,7 +197,7 @@ Create a file named `lowpass_filters.cir` with the following content:
 
 
 ```spice
-   * RC Low-Pass Filter
+* RC Low-Pass Filter
 
 Vin in 0 AC 1 SIN(0 1 1k)    
 R1 in out 1k                 
@@ -209,7 +209,6 @@ C1 out 0 0.1uF
 .endc
 
 .end
-
 ```
 
 
