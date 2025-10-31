@@ -53,6 +53,7 @@ C1 out 0 1u
 * `tran` tells Ngspice to do the transient analysis
 * `.end` marks the end of the file.
 * the voltage across the capacitor saturates at 5V after 4-5 τ
+  
 **Running the Simulation**
 
 Save the file and run:
