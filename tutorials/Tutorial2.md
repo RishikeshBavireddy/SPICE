@@ -21,7 +21,7 @@ In this tutorial, we’ll have a quick review of last tutorial and then continue
 
 ## 1. Review
 <h3>What did we do in the previous session?</h3>
-<img src="./recap.png" alt="Recap" width="60%"/>
+<img src="./recap.png" alt="Recap" width="40%"/>
 
 
 ## 2. Transient Analysis
