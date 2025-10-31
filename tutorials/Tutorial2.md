@@ -167,7 +167,7 @@ plot v(IN) v(C)
 * `.tran 0.1u 10u` tells Ngspice to run transient analysis with step size `0.1u` and run time of `10u`.
 * `plot v(IN) v(C)` tells ngspice to plots voltage of nodes named `IN` and `C`.
 * `.end` marks the end of the file.
-* 
+
 **Running the Simulation**
 
 Save the file and run:
