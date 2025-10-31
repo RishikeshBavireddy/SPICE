@@ -111,7 +111,7 @@ Create a file named `halfwave_rectifier.cir` with the following content:
 
 
 ```spice
-*Full Wave Bridge Rectifier Simulation with sinusoid input
+*Half Wave Bridge Rectifier Simulation with sinusoid input
 
 V1 in 0 SIN(0 5 1) ; SIN(offset Amplitude Frequency)
 
@@ -132,7 +132,7 @@ plot v(out)
 ```
 
 
-* `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
+* `V1 in 0 SIN(0 5 1)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `5 units` Amplitude and Frequency as `1Hz`.
 * `R1` and `C1` form a simple RC circuit.
 * `op` tells Ngspice to compute the operating point.
 * `.end` marks the end of the file.
