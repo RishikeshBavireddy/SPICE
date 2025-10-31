@@ -123,7 +123,7 @@ R1 out 0 5k
 .tran 0.001s 5s
 .control
 run
-plot v(out)
+plot v(in) v(out)
 .endc
 
 .end
@@ -133,21 +133,22 @@ plot v(out)
 
 
 * `V1 in 0 SIN(0 5 1)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `5 units` Amplitude and Frequency as `1Hz`.
-* `R1` and `C1` form a simple RC circuit.
-* `op` tells Ngspice to compute the operating point.
+* `R1` and `D1` completes the circuit.
+* `.tran 0.001s 5s` tells Ngspice to run transient analysis with step size `0.001s` and run time of `5s`.
+* `plot v(out)` tells ngspice to plot voltage of node named `out`.
 * `.end` marks the end of the file.
-* 
+
 **Running the Simulation**
 
 Save the file and run:
 
 ```bash
-ngspice rc_ckt.cir
+ngspice halfwave_rectfier.cir
 ```
 Expected result:
 
-* `V(out)` ≈ 10 V
-* `i(V1)` ≈ 0 A
+* In forward-bias, the amplitude of the sinusoid decreases by 0.6 - 0.7 V
+* In Backward-bias, the current willn't be passed and hence zero voltage across resistor
 
 ---
 
