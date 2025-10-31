@@ -160,7 +160,6 @@ plot v(IN) v(C)
 .endc
 
 .end
-
 ```
 
 
