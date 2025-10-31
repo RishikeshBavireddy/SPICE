@@ -33,37 +33,33 @@ Create a file named `rc_charge.cir` with the following content:
 
 
 ```spice
-*RC circuit transient analysis
+*RC circuit charging time response
 
-V1 in 0 DC 10
-R1 in out 5k
-C1 out 0 10u
+V1 in 0 PULSE(0 5 0 1ns 1ns 1 2)
+R1 in out 1k
+C1 out 0 1u
 
-.tran 1ms 100ms
-.print tran v(out)
-.plot tran v(out)
+.control
+  tran 0.01ms 10ms
+  plot v(in) v(out)
+.endc
+
 .end
-
 ```
 
 
-* `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
+* `V1 in 0 PULSE(0 5 0 1ns 1ns 1 2)` defines a unit step signal between node `in` and ground (`0`).
 * `R1` and `C1` form a simple RC circuit.
-* `op` tells Ngspice to compute the operating point.
+* `tran` tells Ngspice to do the transient analysis
 * `.end` marks the end of the file.
-* 
+* the voltage across the capacitor saturates at 5V after 4-5 τ
 **Running the Simulation**
 
 Save the file and run:
 
 ```bash
-ngspice rc_ckt.cir
+ngspice rc_charge.cir
 ```
-Expected result:
-
-* `V(out)` ≈ 10 V
-* `i(V1)` ≈ 0 A
-
 ---
 
 **Example: RC circuit -- discharging**
@@ -145,12 +141,6 @@ Save the file and run:
 ```bash
 ngspice halfwave_rectfier.cir
 ```
-Expected result:
-
-* In forward-bias, the amplitude of the sinusoid decreases by 0.6 - 0.7 V
-* In Backward-bias, the current willn't be passed and hence zero voltage across resistor
-
----
 
 **Example: BJT circuit -- Inverter**
 
@@ -191,9 +181,6 @@ Save the file and run:
 ```bash
 ngspice inverter.cir
 ```
-Expected result:
-
-*
 
 ---
 
