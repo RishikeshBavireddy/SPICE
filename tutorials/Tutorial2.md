@@ -135,7 +135,7 @@ plot v(in) v(out)
 * `V1 in 0 SIN(0 5 1)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `5 units` Amplitude and Frequency as `1Hz`.
 * `R1` and `D1` completes the circuit.
 * `.tran 0.001s 5s` tells Ngspice to run transient analysis with step size `0.001s` and run time of `5s`.
-* `plot v(out)` tells ngspice to plot voltage of node named `out`.
+* `plot v(in) v(out)` tells ngspice to plots voltage of nodes named `in` and `out`.
 * `.end` marks the end of the file.
 
 **Running the Simulation**
@@ -175,13 +175,13 @@ plot v(IN) v(C)
 .endc
 .end
 
-
 ```
 
 
-* `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
-* `R1` and `C1` form a simple RC circuit.
-* `op` tells Ngspice to compute the operating point.
+* `Vin IN 0 PULSE(0 5 0 1n 1n 1u 2u)` defines 0 V → 5 V pulse, 0 s delay, 1 ns rise time, 1 ns fall time, 1 µs ON time, and 2 µs total period.
+* `Rb`, `Rc` and `Q1` completes the BJT Circuit.
+* `.tran 0.1u 10u` tells Ngspice to run transient analysis with step size `0.1u` and run time of `10u`.
+* `plot v(IN) v(C)` tells ngspice to plots voltage of nodes named `IN` and `C`.
 * `.end` marks the end of the file.
 * 
 **Running the Simulation**
@@ -193,8 +193,7 @@ ngspice inverter.cir
 ```
 Expected result:
 
-* `V(out)` ≈ 10 V
-* `i(V1)` ≈ 0 A
+*
 
 ---
 
