@@ -118,9 +118,9 @@ R1 out 0 5k
 
 .include 1N4007.mod
 
-.tran 0.001s 5s
+
 .control
-run
+tran 0.001s 5s
 plot v(in) v(out)
 .endc
 
