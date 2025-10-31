@@ -21,7 +21,7 @@ In this tutorial, we’ll have a quick review of last tutorial and then continue
 
 ## 1. Review
 What did we do in the previous session ?
-//insert a block diagram
+![Recap](tutorials/recap.png)
 
 
 ## 2. Transient Analysis
