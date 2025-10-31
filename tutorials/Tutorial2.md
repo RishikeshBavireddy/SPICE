@@ -97,11 +97,6 @@ Save the file and run:
 ```bash
 ngspice halfwave_rectifier.cir
 ```
-Expected result:
-
-* `V(out)` ≈ 10 V
-* `i(V1)` ≈ 0 A
-
 ---
 
 **Example: Half-wave rectifier**
