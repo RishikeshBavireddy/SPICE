@@ -140,7 +140,7 @@ Save the file and run:
 ngspice halfwave_rectfier.cir
 ```
 
-**Example: BJT circuit -- Inverter**
+**Example: Inverter using BJT**
 
 Create a file named `inverter.cir` with the following content:
 
