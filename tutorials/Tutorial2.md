@@ -36,7 +36,7 @@ Create a file named `rc_charge.cir` with the following content:
 ```spice
 *RC circuit charging time response
 
-V1 in 0 PULSE(0 5 0 1ns 1ns 1 2)
+V1 in 0 PULSE(0 5 0 1ns 1ns 1 2)    ;PULSE(Vinitial Vpulse Delay RiseTime FallTime PulseWidth Period)
 R1 in out 1k
 C1 out 0 1u
 
