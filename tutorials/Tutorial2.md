@@ -89,6 +89,7 @@ plot v(out)
 * `.end` marks the end of the file.
 * `C1 out 0 100u IC=5` sets the initial capacitor voltage to 5 V.
 * `uic` tells Ngspice to skip operating point calculation and start using the given initial condition.
+  
 **Running the Simulation**
 
 Save the file and run:
