@@ -224,7 +224,39 @@ Save the file and run:
 ```bash
 ngspice lowpass_filter.cir
 ```
+**Example: high-pass filter**
 
+Create a file named `highpass_filters.cir` with the following content:
+
+
+```spice
+* RC High-Pass Filter
+
+Vin in 0 AC 1 SIN(0 1 1k)    
+R1 out 0 1k                 
+C1 in out 0.1uF               
+
+.control
+  ac dec 100 10 1Meg
+  plot V(out)
+.endc
+
+.end
+```
+
+
+* `Vin in 0 AC 1 SIN(0 1 1k)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `1 units` Amplitude and Frequency as `1kHz`.
+* `ac dec 100 10 1Meg` tells Ngspice to run AC analysis with 
+* `plot 'V(out)` tells ngspice to plots voltage of node named `out`.
+* `.end` marks the end of the file.
+
+**Running the Simulation**
+
+Save the file and run:
+
+```bash
+ngspice lowpass_filter.cir
+```
 
 
 
