@@ -65,7 +65,7 @@ ngspice rc_charge.cir
 
 **Example: RC circuit -- discharging**
 
-Create a file named `rc_discharge.cir` with the following content:
+<h3>Create a file named `rc_discharge.cir` with the following content:<h3>
 
 <img src="./rc_discharge.png" alt="Recap" width="60%"/>
 
