@@ -27,9 +27,9 @@ What did we do in the previous session ?
 ## 2. Transient Analysis
 In simple words it is the time-domain response of the circuit
 
-**Example: RC circuit**
+**Example: RC circuit -- charging**
 
-Create a file named `rc_time_response.cir` with the following content:
+Create a file named `rc_charge.cir` with the following content:
 
 
 ```spice
@@ -39,12 +39,72 @@ V1 in 0 DC 10
 R1 in out 5k
 C1 out 0 10u
 
-*control block
-.control
-tran
-print v(out) 
-.endc
-
+.tran 1ms 100ms
+.print tran v(out)
+.plot tran v(out)
 .end
+
 ```
+
+
+* `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
+* `R1` and `C1` form a simple RC circuit.
+* `op` tells Ngspice to compute the operating point.
+* `.end` marks the end of the file.
+* 
+**Running the Simulation**
+
+Save the file and run:
+
+```bash
+ngspice rc_ckt.cir
+```
+Expected result:
+
+* `V(out)` ≈ 10 V
+* `i(V1)` ≈ 0 A
+
+---
+
+**Example: RC circuit -- discharging**
+
+Create a file named `rc_discharge.cir` with the following content:
+
+
+```spice
+*RC circuit transient analysis
+
+V1 in 0 DC 10
+R1 in out 5k
+C1 out 0 10u
+
+.tran 1ms 100ms
+.print tran v(out)
+.plot tran v(out)
+.end
+
+```
+
+
+* `V1 in 0 DC 10` defines a 10 V DC source between node `in` and ground (`0`).
+* `R1` and `C1` form a simple RC circuit.
+* `op` tells Ngspice to compute the operating point.
+* `.end` marks the end of the file.
+* 
+**Running the Simulation**
+
+Save the file and run:
+
+```bash
+ngspice rc_ckt.cir
+```
+Expected result:
+
+* `V(out)` ≈ 10 V
+* `i(V1)` ≈ 0 A
+
+---
+
+
+
 
