@@ -197,5 +197,13 @@ Expected result:
 
 ---
 
+## 3. AC Analysis
+
+### What is AC Analysis?
+AC analysis studies how a circuit responds to **sinusoidal signals** of varying frequency.  
+It determines how **amplitude** and **phase** of the output voltage or current vary with frequency.
+- The circuit is excited with a **1 V (or user-defined)** AC source.
+- Ngspice solves for steady-state **phasor voltages and currents** at each frequency.
+
 
 
