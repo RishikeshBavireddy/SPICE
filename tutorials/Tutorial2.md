@@ -121,8 +121,6 @@ plot v(in) v(out)
 .endc
 
 .end
-
-
 ```
 
 
