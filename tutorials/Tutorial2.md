@@ -101,13 +101,13 @@ Expected result:
 
 ---
 
-**Example: Diode circuit -- Half-wave rectifier**
+**Example: Half-wave rectifier**
 
 Create a file named `halfwave_rectifier.cir` with the following content:
 
 
 ```spice
-*Half Wave Bridge Rectifier Simulation with sinusoid input
+*Half Wave Rectifier Simulation with sinusoid input
 
 V1 in 0 SIN(0 5 1) ; SIN(offset Amplitude Frequency)
 
@@ -129,7 +129,7 @@ plot v(in) v(out)
 
 
 * `V1 in 0 SIN(0 5 1)` defines a Sinusoidal AC source between node `in` and ground (`0`) with `0` offset, `5 units` Amplitude and Frequency as `1Hz`.
-* `R1` and `D1` completes the circuit.
+* resistor `R1` is used to limit the current through diode. 
 * `.tran 0.001s 5s` tells Ngspice to run transient analysis with step size `0.001s` and run time of `5s`.
 * `plot v(in) v(out)` tells ngspice to plots voltage of nodes named `in` and `out`.
 * `.end` marks the end of the file.
@@ -169,7 +169,6 @@ plot v(IN) v(C)
 
 
 * `Vin IN 0 PULSE(0 5 0 1n 1n 1u 2u)` defines 0 V → 5 V pulse, 0 s delay, 1 ns rise time, 1 ns fall time, 1 µs ON time, and 2 µs total period.
-* `Rb`, `Rc` and `Q1` completes the BJT Circuit.
 * `.tran 0.1u 10u` tells Ngspice to run transient analysis with step size `0.1u` and run time of `10u`.
 * `plot v(IN) v(C)` tells ngspice to plots voltage of nodes named `IN` and `C`.
 * `.end` marks the end of the file.
